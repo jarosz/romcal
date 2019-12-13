@@ -112,8 +112,8 @@ const localizeDates = (dates, source = 'sanctoral') => {
   });
 };
 
-// Types.SUNDAY: Sunday, _.last(Types) Feria
-const getTypeByDayOfWeek = d => _.eq(d, 0) ? Types.SUNDAY: _.last(Types);
+// 0: Sunday, 1-6: Feria
+const getTypeByDayOfWeek = d => _.eq(d, 0) ? Types.SUNDAY : Types.FERIA;
 
 const convertMomentObjectToIsoDateString = (items = []) => {
   _.each(items, (item, key) => { // Loop through the date array

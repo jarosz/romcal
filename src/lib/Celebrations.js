@@ -17,7 +17,7 @@ let dates = (year, christmastideEnds, epiphanyOnJan6 = false, corpusChristiOnThu
     // Solemnities
     {
       "key": "immaculateConception",
-      "type": _.head( Types ),
+      "type": Types.SOLEMNITY,
       "moment": Dates.immaculateConception( year ),
       "data": {
         "prioritized": true,
@@ -28,7 +28,7 @@ let dates = (year, christmastideEnds, epiphanyOnJan6 = false, corpusChristiOnThu
     },
     {
       "key": "christmas",
-      "type": _.head( Types ),
+      "type": Types.SOLEMNITY,
       "moment": Dates.christmas( year ),
       "data": {
         "prioritized": true,
@@ -39,7 +39,7 @@ let dates = (year, christmastideEnds, epiphanyOnJan6 = false, corpusChristiOnThu
     },
     {
       "key": "maryMotherOfGod",
-      "type": _.head( Types ),
+      "type": Types.SOLEMNITY,
       "moment": Dates.maryMotherOfGod( year ),
       "data": {
         "prioritized": true,
@@ -50,7 +50,7 @@ let dates = (year, christmastideEnds, epiphanyOnJan6 = false, corpusChristiOnThu
     },
     {
       "key": "epiphany",
-      "type": _.head( Types ),
+      "type": Types.SOLEMNITY,
       "moment": Dates.epiphany( year, epiphanyOnJan6 ),
       "data": {
         "prioritized": true,
@@ -61,7 +61,7 @@ let dates = (year, christmastideEnds, epiphanyOnJan6 = false, corpusChristiOnThu
     },
     {
       "key": "trinitySunday",
-      "type": _.head( Types ),
+      "type": Types.SOLEMNITY,
       "moment": Dates.trinitySunday( year ),
       "data": {
         "prioritized": true,
@@ -72,7 +72,7 @@ let dates = (year, christmastideEnds, epiphanyOnJan6 = false, corpusChristiOnThu
     },
     {
       "key": "corpusChristi",
-      "type": _.head( Types ),
+      "type": Types.SOLEMNITY,
       "moment": Dates.corpusChristi( year, corpusChristiOnThursday ),
       "data": {
         "prioritized": true,
@@ -83,7 +83,7 @@ let dates = (year, christmastideEnds, epiphanyOnJan6 = false, corpusChristiOnThu
     },
     {
       "key": "sacredHeartOfJesus",
-      "type": _.head( Types ),
+      "type": Types.SOLEMNITY,
       "moment": Dates.sacredHeartOfJesus( year ),
       "data": {
         "prioritized": true,
@@ -94,7 +94,7 @@ let dates = (year, christmastideEnds, epiphanyOnJan6 = false, corpusChristiOnThu
     },
     {
       "key": "birthOfJohnTheBaptist",
-      "type": _.head( Types ),
+      "type": Types.SOLEMNITY,
       "moment": Dates.birthOfJohnTheBaptist( year ),
       "data": {
         "prioritized": true,
@@ -105,7 +105,7 @@ let dates = (year, christmastideEnds, epiphanyOnJan6 = false, corpusChristiOnThu
     },
     {
       "key": "peterAndPaulApostles",
-      "type": _.head( Types ),
+      "type": Types.SOLEMNITY,
       "moment": Dates.peterAndPaulApostles( year ),
       "data": {
         "prioritized": true,
@@ -116,7 +116,7 @@ let dates = (year, christmastideEnds, epiphanyOnJan6 = false, corpusChristiOnThu
     },
     {
       "key": "assumption",
-      "type": _.head( Types ),
+      "type": Types.SOLEMNITY,
       "moment": Dates.assumption( year ),
       "data": {
         "prioritized": true,
@@ -127,7 +127,7 @@ let dates = (year, christmastideEnds, epiphanyOnJan6 = false, corpusChristiOnThu
     },
     {
       "key": "allSaints",
-      "type": _.head( Types ),
+      "type": Types.SOLEMNITY,
       "moment": Dates.allSaints( year ),
       "data": {
         "prioritized": true,
@@ -138,7 +138,7 @@ let dates = (year, christmastideEnds, epiphanyOnJan6 = false, corpusChristiOnThu
     },
     {
       "key": "christTheKing",
-      "type": _.head( Types ),
+      "type": Types.SOLEMNITY,
       "moment": Dates.christTheKing( year ),
       "data": {
         "prioritized": true,
@@ -149,7 +149,7 @@ let dates = (year, christmastideEnds, epiphanyOnJan6 = false, corpusChristiOnThu
     },
     {
       "key": "josephHusbandOfMary",
-      "type": _.head( Types ),
+      "type": Types.SOLEMNITY,
       "moment": Dates.josephHusbandOfMary( year ),
       "data": {
         "prioritized": true,
@@ -160,7 +160,7 @@ let dates = (year, christmastideEnds, epiphanyOnJan6 = false, corpusChristiOnThu
     },
     {
       "key": "annunciation",
-      "type": _.head( Types ),
+      "type": Types.SOLEMNITY,
       "moment": Dates.annunciation( year ),
       "data": {
         "prioritized": true,
@@ -171,7 +171,7 @@ let dates = (year, christmastideEnds, epiphanyOnJan6 = false, corpusChristiOnThu
     },
     {
       "key": "easter",
-      "type": _.head( Types ),
+      "type": Types.SOLEMNITY,
       "moment": Dates.easter( year ),
       "data": {
         "prioritized": true,
@@ -182,7 +182,7 @@ let dates = (year, christmastideEnds, epiphanyOnJan6 = false, corpusChristiOnThu
     },
     {
       "key": "divineMercySunday",
-      "type": _.head( Types ),
+      "type": Types.SOLEMNITY,
       "moment": Dates.divineMercySunday( year ),
       "data": {
         "prioritized": true,
@@ -193,7 +193,7 @@ let dates = (year, christmastideEnds, epiphanyOnJan6 = false, corpusChristiOnThu
     },
     {
       "key": "ascension",
-      "type": _.head( Types ),
+      "type": Types.SOLEMNITY,
       "moment": Dates.ascension( year, ascensionOnSunday ),
       "data": {
         "prioritized": true,
@@ -204,7 +204,7 @@ let dates = (year, christmastideEnds, epiphanyOnJan6 = false, corpusChristiOnThu
     },
     {
       "key": "pentecostSunday",
-      "type": _.head( Types ),
+      "type": Types.SOLEMNITY,
       "moment": Dates.pentecostSunday( year ),
       "data": {
         "prioritized": true,
@@ -216,7 +216,7 @@ let dates = (year, christmastideEnds, epiphanyOnJan6 = false, corpusChristiOnThu
     // Lent, Holy Week & Triduum
     {
       "key": "ashWednesday",
-      "type": _.last( Types ),
+      "type": Types.FERIA,
       "moment": Dates.ashWednesday( year ),
       "data": {
         "prioritized": true,

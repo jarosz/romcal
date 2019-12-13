@@ -40,7 +40,7 @@ const _epiphany = (y, epiphanyOnJan6 = false) => {
   _.each( before, day => {
     days.push({
       moment: day,
-      type: _.last( Types ),
+      type: Types.FERIA,
       name: Utils.localize({
         key: 'epiphany.before',
         day: day.format('dddd')
@@ -63,7 +63,7 @@ const _epiphany = (y, epiphanyOnJan6 = false) => {
   _.each( after, day => {
     days.push({
       moment: day,
-      type: _.last( Types ),
+      type: Types.FERIA,
       name: Utils.localize({
         key: 'epiphany.after',
         day: day.format('dddd')
@@ -327,7 +327,7 @@ const earlyOrdinaryTime = (y, christmastideEnds, epiphanyOnJan6 = false) => {
   _.each( Dates.daysOfEarlyOrdinaryTime(y, christmastideEnds, epiphanyOnJan6), ( value, i ) => {
     days.push({
       moment: value,
-      type: ( _.eq( value.day(), 0 ) ? Types.SUNDAY : _.last( Types ) ),
+      type: ( _.eq( value.day(), 0 ) ? Types.SUNDAY : Types.FERIA ),
       name: Utils.localize({
         key: ( _.eq( value.day(), 0 ) ? 'ordinaryTime.sunday' : 'ordinaryTime.feria' ),
         day: value.format('dddd'),
@@ -412,7 +412,7 @@ const laterOrdinaryTime = y => {
 
     days.push({
       moment: value,
-      type: ( _.eq( value.day(), 0 ) ? Types.SUNDAY : _.last( Types ) ),
+      type: ( _.eq( value.day(), 0 ) ? Types.SUNDAY : Types.FERIA ),
       name: Utils.localize({
         key: ( _.eq( value.day(), 0 ) ? 'ordinaryTime.sunday' : 'ordinaryTime.feria' ),
         day: value.format('dddd'),
@@ -494,7 +494,7 @@ const lent = y => {
   _.each( daysOfLent, (value, i) => {
     days.push({
       moment: value,
-      type: _.last( Types ), // Feria
+      type: Types.FERIA, // Feria
       name: Utils.localize({
         key: ( _.gt( i, 0 ) && _.lt( i, 4 ) ) ?  'lent.day_after_ash_wed' : 'lent.feria',
         day: value.format('dddd'),
@@ -617,7 +617,7 @@ const eastertide = y => {
   _.each( d, (value, i) => {
     days.push({
       moment: value,
-      type: ( _.gt( i, 0 ) && _.lt( i, 7 ) ) ? _.head( Types ): _.last( Types ),
+      type: ( _.gt( i, 0 ) && _.lt( i, 7 ) ) ? Types.SOLEMNITY: Types.FERIA,
       name: Utils.localize({
         key: ( _.gt( i, 0 ) && _.lt( i, 7 ) ) ?  'eastertide.octave' : 'eastertide.feria',
         day: value.format('dddd'),

@@ -206,7 +206,7 @@ let dates = year => {
     // on a Sunday it replaces the Sunday.
     {
       "key": "allSaints",
-      "type": _.head( Types ),
+      "type": Types.SOLEMNITY,
       "moment": ( y => {
         let date = moment.utc({ year: y, month: 10, day: 1 });
         if ( _.eq(date.day(), 6 )) {
