@@ -304,7 +304,7 @@ const _applyDates = ( options, dates ) => {
         else if (
           _.eq( date.type, _.last( Types ) )
           && _.eq( date.data.season.key, LiturgicalSeasons.LENT )
-          && ( _.eq( candidate.type, Types[5] ) || _.eq( candidate.type, Types[6] ) )
+          && ( _.eq( candidate.type, Types.MEMORIAL ) || _.eq( candidate.type, Types.OPT_MEMORIAL ) )
         ) {
           replace = true;
           derank = true;
@@ -317,7 +317,7 @@ const _applyDates = ( options, dates ) => {
         else if (
           _.eq( date.type, _.last( Types ) ) // If the current date is of type feria
           && !_.eq( date.data.season.key, LiturgicalSeasons.LENT ) // And this feria is not in Lent
-          && ( _.eq( candidate.type, Types[5] ) || _.eq( candidate.type, Types[6] ) ) // And the candidate is either a memorial or optional memorial
+          && ( _.eq( candidate.type, Types.MEMORIAL ) || _.eq( candidate.type, Types.OPT_MEMORIAL ) ) // And the candidate is either a memorial or optional memorial
         ) {
           replace = true; // Then the candidate is fit to replace the feria
         }
@@ -327,7 +327,7 @@ const _applyDates = ( options, dates ) => {
         // - feria must not be in the octave of EASTER
         //------------------------------------------------------------------
         else if (
-          _.eq( candidate.type, Types[4] )
+          _.eq( candidate.type, Types.FEAST )
           && _.eq( date.type, _.last( Types ) )
           && !_.eq( date.data.season.key, LiturgicalSeasons.LENT )
           && !candidate.data.prioritized
@@ -340,7 +340,7 @@ const _applyDates = ( options, dates ) => {
         // to a COMMEMORATION
         //------------------------------------------------------------------
         else if (
-          _.eq( candidate.type, Types[4] )
+          _.eq( candidate.type, Types.FEAST )
           && _.eq( date.type, _.last( Types ) )
           && _.eq( date.data.season.key, LiturgicalSeasons.LENT )
         ) {
@@ -354,8 +354,8 @@ const _applyDates = ( options, dates ) => {
         // - feria must not be in the octave of EASTER
         //------------------------------------------------------------------
         else if (
-          _.eq( candidate.type, Types[4] )
-          && ( _.eq( date.type, _.last( Types ) ) || _.eq( date.type, Types[1] ) )
+          _.eq( candidate.type, Types.FEAST )
+          && ( _.eq( date.type, _.last( Types ) ) || _.eq( date.type, Types.SUNDAY ) )
           && !_.eq( date.data.season.key, LiturgicalSeasons.LENT )
           && candidate.data.prioritized
         ) {
@@ -366,8 +366,8 @@ const _applyDates = ( options, dates ) => {
         // A Sunday can only replace a Sunday
         //------------------------------------------------------------------
         else if (
-          _.eq( date.type, Types[1] )
-          && _.eq( candidate.type, Types[1] )
+          _.eq( date.type, Types.SUNDAY )
+          && _.eq( candidate.type, Types.SUNDAY )
         ) {
           replace = true;
         }
@@ -395,7 +395,7 @@ const _applyDates = ( options, dates ) => {
         date.key = candidate.key;
         date.name = candidate.name;
         date.source = candidate.source;
-        date.type = ( derank ? Types[7] : candidate.type );
+        date.type = ( derank ? Types.COMMEMORATION : candidate.type );
         date.data = _.merge({}, date.data, candidate.data );
       }
     }

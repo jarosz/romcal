@@ -233,7 +233,7 @@ let dates = (year, christmastideEnds, epiphanyOnJan6 = false, corpusChristiOnThu
     },
     {
       "key": "palmSunday",
-      "type": Types[1],
+      "type": Types.SUNDAY,
       "moment": Dates.palmSunday( year ),
       "data": {
         "prioritized": true,
@@ -250,7 +250,7 @@ let dates = (year, christmastideEnds, epiphanyOnJan6 = false, corpusChristiOnThu
     },
     {
       "key": "holyThursday",
-      "type": Types[2],
+      "type": Types.TRIDUUM,
       "moment": Dates.holyThursday( year ),
       "data": {
         "prioritized": true,
@@ -270,7 +270,7 @@ let dates = (year, christmastideEnds, epiphanyOnJan6 = false, corpusChristiOnThu
     },
     {
       "key": "goodFriday",
-      "type": Types[2],
+      "type": Types.TRIDUUM,
       "moment": Dates.goodFriday( year ),
       "data": {
         "prioritized": true,
@@ -290,7 +290,7 @@ let dates = (year, christmastideEnds, epiphanyOnJan6 = false, corpusChristiOnThu
     },
     {
       "key": "holySaturday",
-      "type": Types[2],
+      "type": Types.TRIDUUM,
       "moment": Dates.holySaturday( year ),
       "data": {
         "prioritized": true,
@@ -311,7 +311,7 @@ let dates = (year, christmastideEnds, epiphanyOnJan6 = false, corpusChristiOnThu
     // Feasts
     {
       "key": "holyFamily",
-      "type": Types[4],
+      "type": Types.FEAST,
       "moment": Dates.holyFamily( year ),
       "data": {
         "prioritized": true,
@@ -325,7 +325,7 @@ let dates = (year, christmastideEnds, epiphanyOnJan6 = false, corpusChristiOnThu
     },
     {
       "key": "baptismOfTheLord",
-      "type": Types[4],
+      "type": Types.FEAST,
       "moment": Dates.baptismOfTheLord( year, epiphanyOnJan6 ),
       "data": {
         "prioritized": true,
@@ -339,7 +339,7 @@ let dates = (year, christmastideEnds, epiphanyOnJan6 = false, corpusChristiOnThu
     },
     {
       "key": "presentationOfTheLord",
-      "type": Types[4],
+      "type": Types.FEAST,
       "moment": Dates.presentationOfTheLord( year ),
       "data": {
         "prioritized": true,
@@ -353,7 +353,7 @@ let dates = (year, christmastideEnds, epiphanyOnJan6 = false, corpusChristiOnThu
     },
     {
       "key": "transfiguration",
-      "type": Types[4],
+      "type": Types.FEAST,
       "moment": Dates.transfiguration( year ),
       "data": {
         "prioritized": true,
@@ -367,7 +367,7 @@ let dates = (year, christmastideEnds, epiphanyOnJan6 = false, corpusChristiOnThu
     },
     {
       "key": "theExaltationOfTheHolyCross",
-      "type": Types[4],
+      "type": Types.FEAST,
       "moment": Dates.theExaltationOfTheHolyCross( year ),
       "data": {
         "prioritized": true,
@@ -382,7 +382,7 @@ let dates = (year, christmastideEnds, epiphanyOnJan6 = false, corpusChristiOnThu
     // Memorials
     {
       "key": "immaculateHeartOfMary",
-      "type": Types[4],
+      "type": Types.FEAST,
       "moment": Dates.immaculateHeartOfMary( year ),
       "data": {
         "prioritized": true,

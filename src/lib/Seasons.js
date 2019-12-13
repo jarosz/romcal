@@ -95,7 +95,7 @@ const _holyWeek = y => {
   _.each( dates, (date, i) => {
     days.push({
       moment: date,
-      type: Types[3],
+      type: Types.HOLY_WEEK,
       name: Utils.localize({
         key: 'holyWeek.feria',
         day: date.format('dddd')
@@ -327,7 +327,7 @@ const earlyOrdinaryTime = (y, christmastideEnds, epiphanyOnJan6 = false) => {
   _.each( Dates.daysOfEarlyOrdinaryTime(y, christmastideEnds, epiphanyOnJan6), ( value, i ) => {
     days.push({
       moment: value,
-      type: ( _.eq( value.day(), 0 ) ? Types[1] : _.last( Types ) ),
+      type: ( _.eq( value.day(), 0 ) ? Types.SUNDAY : _.last( Types ) ),
       name: Utils.localize({
         key: ( _.eq( value.day(), 0 ) ? 'ordinaryTime.sunday' : 'ordinaryTime.feria' ),
         day: value.format('dddd'),
@@ -412,7 +412,7 @@ const laterOrdinaryTime = y => {
 
     days.push({
       moment: value,
-      type: ( _.eq( value.day(), 0 ) ? Types[1] : _.last( Types ) ),
+      type: ( _.eq( value.day(), 0 ) ? Types.SUNDAY : _.last( Types ) ),
       name: Utils.localize({
         key: ( _.eq( value.day(), 0 ) ? 'ordinaryTime.sunday' : 'ordinaryTime.feria' ),
         day: value.format('dddd'),
@@ -514,7 +514,7 @@ const lent = y => {
   _.each( sundaysOfLent, ( value, i ) => {
     sundays.push({
       moment: value,
-      type: Types[1],
+      type: Types.SUNDAY,
       name: Utils.localize({
         key: 'lent.sunday',
         day: value.format('dddd'),
@@ -640,7 +640,7 @@ const eastertide = y => {
   _.each( s, ( value, i ) => {
     sundays.push({
       moment: value,
-      type: Types[1],
+      type: Types.SUNDAY,
       name: Utils.localize({
         key: 'eastertide.sunday',
         day: value.format('dddd'),

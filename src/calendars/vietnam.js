@@ -10,7 +10,7 @@ let dates = year => {
   let _dates = [
     {
       "key": "vietnameseMartyrs",
-      "type": Types[4],
+      "type": Types.FEAST,
       "moment": moment.utc({ year: year, month: 10, day: 13 }),
       "data": {
         "meta": {
