@@ -2,38 +2,38 @@ export default {
   "advent": {
     "season": "Adventné obdobie",
     "feria": "{{day}} po {{week}}. adventnej nedeli",
-    "sunday": "{{week}}. adventná nedeľa"
+    "sunday": "{{week}} adventná nedeľa"
   },
   "christmastide": {
     "season": "Vianočné obdobie",
     "day": "{{day}} vo Vianočnom období",
-    "octave": "{{count}}. deň v oktáve narodenia Pána",
-    "sunday": "{{count}}. nedeľa po narodení Pána"
+    "octave": "{{count}} deň v oktáve narodenia Pána",
+    "sunday": "{{count}} nedeľa po narodení Pána"
   },
   "epiphany": {
     "season": "Zjavenie Pána",
-    "before": "{{day}} vo Vianočnom období",
+    "before": "{{day}} vo vianočnom období",
     "after": "{{day}} po Zjavení Pána"
   },
   "ordinaryTime": {
     "season": "Cezročné obdobie",
-    "feria": "{{day}} {{week}}. týždňa v Cezročnom období",
-    "sunday": "{{week}}. nedeľa v Cezročnom období"
+    "feria": "{{day}} {{week}} týždňa v Cezročnom období",
+    "sunday": "{{week}} nedeľa v Cezročnom období"
   },
   "lent": {
     "season": "Pôstne obdobie",
     "feria": "{{day}} po {{week}}. pôstnej nedeli",
-    "sunday": "{{week}}. pôstna nedeľa",
+    "sunday": "{{week}} pôstna nedeľa",
     "day_after_ash_wed": "{{day}} po Popolcovej strede"
   },
   "holyWeek": {
     "season": "Veľký týždeň",
-    "feria": "{{day}} vo Veľkom týždni"
+    "feria": "{{day}} Veľkého týždňa"
   },
   "eastertide": {
     "season": "Veľkonočné obdobie",
-    "feria": "{{day}} po {{week}.} veľkonočnej nedeli",
-    "sunday":  "{{week}} veľkonočná nedeľa",
+    "feria": "{{day}} po {{week}} veľkonočnej nedeli",
+    "sunday": "{{week}} veľkonočná nedeľa",
     "octave": "Veľkonočný {{day}}"
   },
   "celebrations": {
@@ -51,7 +51,7 @@ export default {
     "easter": "Nedeľa Pánovho zmŕtvychvstania",
     "epiphany": "Zjavenie Pána",
     "goodFriday": "Veľký piatok",
-    "guardianAngelOfPortugal": "Portugalského anjela strážcu",
+    "guardianAngelOfPortugal": "Anjela strážcu Portugalska",
     "holyFamily": "Svätej rodiny Ježiša, Márie a Jozefa",
     "holySaturday": "Biela sobota",
     "holyThursday": "Zelený štvrtok",
@@ -112,6 +112,7 @@ export default {
     "blessedInacioDeAzevedoPriestAndCompanionsMartyrs": "Blahoslaveného Ignáca de Azevedo, kňaza, a spoločníkov, mučeníkov",
     "blessedInnocentXiPope": "Blahoslaveného Inocenta XI., pápeža",
     "blessedIrishMartyrs": "Blahoslavených írskych mučeníkov",
+    "blessedIstvanSandorMartyr": "Blahoslaveného Štefana Šándora, mučeníka",
     "blessedIvanMerz": "Blahoslaveného Ivana Merza",
     "blessedJacintaAndFranciscoMarto": "Svätých Hyacinty a Františka Martovcov",
     "blessedJakubStrzemieBishop": "Blahoslaveného Jakuba Strzemię, biskupa",
@@ -151,7 +152,7 @@ export default {
     "blessedPiusIxPope": "Blahoslaveného Pia IX., pápeža",
     "blessedRafalChylinskiPriest": "Blahoslaveného Rafaela Chylinského, kňaza",
     "blessedSalomeVirgin": "Blahoslavenej Salomey Poľskej, panny",
-    "blessedSanchaAndMafaldaVirginsOrBlessedTheresaOfPOrtugalReligious": "Blahoslavených Sanche a Mafaldy, panny, alebo blahoslavenej Terezy Portugalskej, rehoľnice",
+    "blessedSanchaAndMafaldaVirginsOrBlessedTheresaOfPortugalReligious": "Blahoslavených Sanche a Mafaldy, panny, alebo blahoslavenej Terezy Portugalskej, rehoľnice",
     "blessedsAndreDeSoveralAndAmbrosioFranciscoFerroPriestsAndMartyrs": "Blahoslavených Andreja de Soverala a Ambróza Františka Ferra, mučeníka",
     "blessedSaraSalkahaziVirginAndMartyr": "Blahoslavenej Sáry Salkaháziovej, panny a mučenice",
     "blessedsCarlosSpinolaAndJeronimoDeAngelisPriestsAndMartyrs": "blahoslavených Karla Spinolu a Hieronyma de Angelis, kňazov a mučeníkov",
@@ -173,6 +174,7 @@ export default {
     "dedicationOfTheBasilicasOfSaintsPeterAndPaulApostles": "Výročie posviacky bazilík svätého Petra a svätého Pavla, apoštolov",
     "dedicationOfTheLateranBasilica": "Výročie posviacky Lateránskej baziliky",
     "discoveryOfTheHiddenChristians": "Objavenia skrytých kresťanov",
+    "findingOfTheHolyCross": "Nájdenie Svätého kríža",
     "firstMartyrsOfTheChurchOfRome": "Prvých svätých mučeníkov Cirkvi v Ríme",
     "guardianAngels": "Svätých anjelov strážcov",
     "holyInnocentsMartyrs": "Svätých Neviniatok, mučeníkov",
@@ -195,6 +197,7 @@ export default {
     "ourLadyOfGuadalupe": "Preblahoslavenej Panny Márie Guadalupskej",
     "ourLadyOfHungary": "Patrónka Maďarov",
     "ourLadyOfItati": "Panny Márie Itatskej",
+    "ourLadyOfKnock": "Panny Márie z Knock",
     "ourLadyOfLanka": "Panny Márie z Lanky",
     "ourLadyOfLebanon": "Panny Márie z Lebanonu",
     "ourLadyOfLoreto": "Preblahoslavenej Panny Márie Loretánskej",
@@ -202,7 +205,7 @@ export default {
     "ourLadyOfLujanPatronessOfArgentina": "Panny Marie Lujánska",
     "ourLadyOfMadhu": "Panny Márie z Madhu",
     "ourLadyOfMercy": "Panny Márie milosrdenstva",
-    "ourLadyOfMountCarmel":  "Preblahoslavenej Panny Márie Karmelskej",
+    "ourLadyOfMountCarmel": "Preblahoslavenej Panny Márie Karmelskej",
     "ourLadyOfMountCarmelMotherAndQueenOfChile": "Panny Márie Karmelskej, Matky a Kráľovnej Chile",
     "ourLadyOfPeace": "Panny Márie pokoja",
     "ourLadyOfPerpetualHelpOrBlessedLeonidFeodorovPriestAndMartyr": "Panny Márie ustavičnej pomoci alebo blahoslaveného Leonida Fjodorova, kňaza a mučeníka",
@@ -290,6 +293,7 @@ export default {
     "saintCaesariusOfArlesBishop": "Svätého Cézara z Arles, biskupa",
     "saintCallistusIPopeAndMartyr": "Svätého Kalixta I., pápeža a mučeníka",
     "saintCamillusDeLellisPriest": "Svätého Kamila de Lellis, kňaza",
+    "saintCamillusDeLellisPriestOrSaintHenryBishopAndMartyr": "Svätého Kamila de Lellis, kňaza, alebo svätého Henricha",
     "saintCaniceAbbot": "Svätého Canica, opáta",
     "saintCanuteMartyr": "Svätého Kanuta, mučeníka",
     "saintCarthageBishopMochuta": "Svätého Kartága (Mo Chutu), biskupa",
@@ -549,7 +553,6 @@ export default {
     "saintMoninneVirgin": "Svätej Moninny, panny",
     "saintMuiredachBishopSaintAttractaVirginOrSaintLeliaVirgin": "Svätého Muredacha, biskupa, alebo svätej Atrakty, panny, alebo svätej Lelie, panny",
     "saintMunchinBishop": "Svätého Munchina, biskupa",
-    "saintNicholas": "Svätého Mikuláša, biskupa",
     "saintNicholasBishop": "Svätého Mikuláša, biskupa",
     "saintNicholasOfFlueHermit": "Svätého Mikuláša z Flüe, pustovníka",
     "saintNikolaTavelicPriestAndMartyr": "Svätého Nikolu Tavelića, kňaza a mučeníka",
@@ -565,7 +568,6 @@ export default {
     "saintOttoOfBambergBishop": "Svätého Ota z Bambergu, biskupa",
     "saintPantaleon": "Svätého Pantaleóna",
     "saintPaschalBaylon": "Svätého Paschala Baylóna, rehoľníka",
-    "saintPatrick": "Svätého Patrika, biskupa",
     "saintPatrickBishop": "Svätého Patrika, biskupa",
     "saintPaulinaOfTheAgonizingHeartOfJesusVirgin": "Svätej Paulíny trpiaceho Srdca Ježišovho, panny",
     "saintPaulinusOfNolaBishopSaintsJohnFisherBishopAndThomasMoreMartyrs": "Svätého Pavlína z Noly, biskupa/Svätých Jána Fishera, biskupa, a Tomáša Mórusa, mučeníkov",
@@ -608,7 +610,6 @@ export default {
     "saintRoseOfLima": "Svätej Ruženy Limskej, panny",
     "saintRosePhilippineDuchesneVirgin": "Svätej Ruženy Filipíny Duchesne, panny",
     "saintsAlbanJuliusAndAaronMartyrs": "Svätého Albána, Júlia and Árona, mučeníkov",
-    "saintsAndrewZoerardusAndBenedictHermits": "Svätých Andreja-Svorada a Benedikta, pustovníkov",
     "saintsAndrewZorardAndBenedictHermits": "Svätých Andreja-Svorada a Benedikta, pustovníkov",
     "saintsAugustineZhaoRongPriestAndCompanionsMartyrs": "Svätých Augustína Zhao Rong, kňaza, a spoločníkov, mučeníkov",
     "saintsBasilTheGreatAndGregoryNazianzenBishopsAndDoctors": "Svätých Bazila Veľkého a Gregora Nazianzského, biskupov a učiteľov Cirkvi",

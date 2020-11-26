@@ -51,6 +51,19 @@ describe("Testing specific feasts and memorials", function() {
       maryMotherOfTheChurch.moment.day().should.be.eql(1);
       maryMotherOfTheChurch.moment.subtract(1, 'days').should.be.eql(pentecostSunday);
     });
+
+    it('Should take precedence in the event of coincidence with another memorial of a saint or blessed', function() {
+      // In 2020, monday after Pentecost is June 1
+      var juneDates = Calendar.calendarFor({
+        year: 2020,
+        query: {
+          month: 5
+        }
+      }, true);
+      // according to the general calendar, June 1 is the memorial of saint Justin, Martyr
+      var maybeSaintJustinMartyr = juneDates[0];
+      maybeSaintJustinMartyr.key.should.be.eql('maryMotherOfTheChurch');
+    });
   });
 
   describe('The celebration of Saint Mary Magdalene', function() {
@@ -61,7 +74,7 @@ describe("Testing specific feasts and memorials", function() {
       });
       saintMaryMagdalene.moment.date().should.be.eql(22);
       saintMaryMagdalene.moment.month().should.be.eql(6);
-      saintMaryMagdalene.type.should.be.eql(Types[4]);
+      saintMaryMagdalene.type.should.be.eql(Types.FEAST);
     });
   });
 
@@ -74,8 +87,8 @@ describe("Testing specific feasts and memorials", function() {
       let popeSaintJohnPaulII = _.find(dates, function(d) {
         return _.eq(d.key, "popeSaintJohnPaulII");
       });
-      popeSaintJohnXXIII.type.should.be.eql(Types[6]);
-      popeSaintJohnPaulII.type.should.be.eql(Types[6]);
+      popeSaintJohnXXIII.type.should.be.eql(Types.OPT_MEMORIAL);
+      popeSaintJohnPaulII.type.should.be.eql(Types.OPT_MEMORIAL);
     });
   });
 

@@ -115,28 +115,6 @@ describe('Testing national calendar overrides', function() {
       });
       date.moment.isSame(moment.utc({ year: 2017, month: 6, day: 5 })).should.be.ok();
     });
-    it('Should fall on 14th Feb 2017 in the national calendar of the Czech Republic if the "saintsCyrilMonkAndMethodiusBishopOnFeb14" flag is passed as "true"', function() {
-      var dates = Calendar.calendarFor({
-        country: 'slovakia',
-        year: 2017,
-        saintsCyrilMonkAndMethodiusBishopOnFeb14: true
-      }, true);
-      var date = _.find(dates, function(d) {
-        return _.eq(d.key, 'saintsCyrilMonkAndMethodiusBishop');
-      });
-      date.moment.isSame(moment.utc({ year: 2017, month: 1, day: 14 })).should.be.ok();
-    });
-    it('Should fall on 14th Feb 2017 in the national calendar of Slovakia if the "saintsCyrilMonkAndMethodiusBishopOnFeb14" flag is passed as "true"', function() {
-      var dates = Calendar.calendarFor({
-        country: 'czechRepublic',
-        year: 2017,
-        saintsCyrilMonkAndMethodiusBishopOnFeb14: true
-      }, true);
-      var date = _.find(dates, function(d) {
-        return _.eq(d.key, 'saintsCyrilMonkAndMethodiusBishop');
-      });
-      date.moment.isSame(moment.utc({ year: 2017, month: 1, day: 14 })).should.be.ok();
-    });
   });
 
   describe('The feast of the Assumption in England and Wales', function() {
@@ -311,7 +289,7 @@ describe('Testing national calendar overrides', function() {
       var saintMatthiasGermany = _.find(germanyDates, function(d) {
         return _.eq(d.key, 'saintMatthiasTheApostle');
       });
-      saintMatthiasGermany.type.should.be.eql(Types[5]);
+      saintMatthiasGermany.type.should.be.eql(Types.MEMORIAL);
     });
   });
 
@@ -328,8 +306,8 @@ describe('Testing national calendar overrides', function() {
       var saintChristopherMagallanesAndCompanionsMartyrsMexico = _.find(mexicoDates, function(d) {
         return _.eq(d.key, 'saintChristopherMagallanesAndCompanionsMartyrs');
       });
-      saintChristopherMagallanesAndCompanionsMartyrs.type.should.be.eql(Types[6]);
-      saintChristopherMagallanesAndCompanionsMartyrsMexico.type.should.be.eql(Types[5]);
+      saintChristopherMagallanesAndCompanionsMartyrs.type.should.be.eql(Types.OPT_MEMORIAL);
+      saintChristopherMagallanesAndCompanionsMartyrsMexico.type.should.be.eql(Types.MEMORIAL);
     });
   });
 
@@ -349,8 +327,8 @@ describe('Testing national calendar overrides', function() {
       var saintLadislausSlovakia = _.find(slovakiaDates, function(d) {
         return _.eq(d.key, 'saintLadislaus');
       });
-      saintLadislausHungary.type.should.be.eql(Types[4]);
-      saintLadislausSlovakia.type.should.be.eql(Types[6]);
+      saintLadislausHungary.type.should.be.eql(Types.FEAST);
+      saintLadislausSlovakia.type.should.be.eql(Types.OPT_MEMORIAL);
     });
   });
 
@@ -361,7 +339,7 @@ describe('Testing national calendar overrides', function() {
       var ourLadyOfSorrows = _.find(dates, function(d) {
         return _.eq(d.key, 'ourLadyOfSorrows');
       });
-      ourLadyOfSorrows.type.should.be.eql(Types[5]);
+      ourLadyOfSorrows.type.should.be.eql(Types.MEMORIAL);
       ourLadyOfSorrows.moment.isSame(moment.utc({ year: 2018, month: 8, day: 15 })).should.be.ok();
     });
 
@@ -373,7 +351,7 @@ describe('Testing national calendar overrides', function() {
       var ourLadyOfSorrows = _.find(maltaDates, function(d) {
         return _.eq(d.key, 'ourLadyOfSorrows');
       });
-      ourLadyOfSorrows.type.should.be.eql(Types[4]);
+      ourLadyOfSorrows.type.should.be.eql(Types.FEAST);
       ourLadyOfSorrows.moment.isSame(moment.utc({ year: 2015, month: 3, day: 15 })).should.be.ok();
     });
 
@@ -397,7 +375,7 @@ describe('Testing national calendar overrides', function() {
       var ourLadyOfSorrows = _.find(slovakiaDates, function(d) {
         return _.eq(d.key, 'ourLadyOfSorrows');
       });
-      ourLadyOfSorrows.type.should.be.eql(Types[0]);
+      ourLadyOfSorrows.type.should.be.eql(Types.SOLEMNITY);
       ourLadyOfSorrows.moment.isSame(moment.utc({ year: 2018, month: 8, day: 15 })).should.be.ok();
     });
 
